@@ -112,9 +112,14 @@ averaging_filter = cv.blur(gray_img,(5,5))
 #Gaussian filter
 gaussian_filter = cv.GaussianBlur(gray_img,(5,5), 1 )
 
-top = np.hstack((gray_img,averaging_filter))
-bottom = np.hstack((gaussian_filter,gray_img))
-grid = np.vstack((top,bottom))
+#The difference between the two filtered results
+diff = cv.absdiff(averaging_filter,gaussian_filter)
 
+#Apply a suitable Colormap
+#colored_diff = cv.applyColorMap(diff,cv.COLORMAP_COOL)
+
+top = np.hstack((gray_img,averaging_filter))
+bottom = np.hstack((gaussian_filter,diff))
+grid = np.vstack((top,bottom))
 cv.imshow('grid window',grid)
 cv.waitKey(0)
