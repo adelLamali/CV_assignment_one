@@ -10,8 +10,6 @@ gray_img_3ch = cv.cvtColor(gray_img, cv.COLOR_GRAY2BGR )
 print(gray_img_3ch.shape)
 concatenation = cv.hconcat([img,gray_img_3ch]) 
 
-#cv.imshow('Telephone', img)
-#cv.imshow('Gray Telephone', gray_img)
 cv.imshow('Telephone Concatenation', concatenation)
 
 cv.waitKey(0)  

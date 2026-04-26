@@ -1,11 +1,10 @@
 import cv2 as cv
-
+import numpy as np
 
 #Task eleven Crop an Image:
 
 img = cv.imread('images/window.jpg')
 #y = 0.299 R + 0.587 G + 0.114 B
-
 gray_img = cv.cvtColor(img, cv.COLOR_BGR2GRAY )
 
 #Averaging filter

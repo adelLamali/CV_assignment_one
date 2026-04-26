@@ -11,7 +11,7 @@ width = img1.shape[1] #Cherries image width
 dimensions = (width,height)
 
 img2 = cv.resize(img2,dimensions,interpolation=cv.INTER_LINEAR)
-#INTER_LINEAR:It provides a good balance between speed and quality for resizing.
+#INTER_LINEAR:provides a good balance between speed and quality for resizing.
 
 print('Cherries image shape',img1.shape) #Cherrie image dimensions
 print('Coffee Beans image shape',img2.shape) #Coffee beans image dimensions
